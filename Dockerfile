@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-EXPOSE 80
+EXPOSE 8081
 
 ARG JAR_FILE=devworks-1.0.0.jar
 
