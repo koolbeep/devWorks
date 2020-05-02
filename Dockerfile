@@ -5,7 +5,7 @@ FROM openjdk:8-jdk-alpine
 #FROM adoptopenjdk/openjdk11:alpine-jre
 
 # Refer to Maven build -> finalName
-ARG JAR_FILE=target/spring-boot-web.jar
+ARG JAR_FILE=target/devworks-1.0.0.jar
 
 # cd /opt/app
 WORKDIR /opt/app
