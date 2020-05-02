@@ -1,0 +1,25 @@
+language: generic
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t koolbeep/devWorks
+  
+#script:
+#  - docker run -e CI=true koolbeep/devWorks npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "devWorks"
+  env: "Devworks-env"
+  bucket_name: "elasticbeanstalk-us-east-2-548571153351"
+  bucket_path: "devWorks"
+  on:
+    branch: master
+  access_key_id: $AWS_DEVWORKS_ACCESS_KEY
+  secret_access_key: $AWS_DEVWORKS_SECRET_KEY
+  
+ 
