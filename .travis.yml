@@ -9,10 +9,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t koolbeep/devworks .
-  
-script:
   - mvn clean install
+  - docker build -t koolbeep/devworks .
 
 deploy:
   provider: elasticbeanstalk
