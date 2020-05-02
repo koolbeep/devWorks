@@ -11,8 +11,8 @@ services:
 before_install:
   - docker build -t koolbeep/devworks .
   
-#script:
-#  - docker run -e CI=true koolbeep/devWorks npm run test
+script:
+  - mvn clean install
 
 deploy:
   provider: elasticbeanstalk
