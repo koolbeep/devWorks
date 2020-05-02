@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t koolbeep/devWorks
+  - docker build -t koolbeep/devWorks -f Dockerfile
   
 #script:
 #  - docker run -e CI=true koolbeep/devWorks npm run test
