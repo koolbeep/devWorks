@@ -16,7 +16,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "devWorks"
-  env: "Devworks-env-1"
+  env: "Devworks-env"
   bucket_name: "elasticbeanstalk-us-east-2-548571153351"
   bucket_path: "devWorks"
   on:
