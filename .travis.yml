@@ -12,6 +12,9 @@ before_install:
   - mvn package
   - docker build -t koolbeep/devworks .
 
+before_deploy:
+  - ls -lrt
+
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
