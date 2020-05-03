@@ -13,7 +13,7 @@ before_install:
   - docker build -t koolbeep/devworks .
 
 before_deploy:
-  - mv target/dev* .
+  - cp target/devworks-1.0.0.jar .
 
 deploy:
   provider: elasticbeanstalk
