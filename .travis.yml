@@ -7,10 +7,15 @@ sudo: required
 
 services:
   - docker
+  
+cleanup: true
 
 before_install:
   - mvn package
   - docker build -t koolbeep/devworks .
+  
+#script:
+#  - docker run -e CI=true koolbeep/devworks
 
 deploy:
   skip_cleanup: true
@@ -25,5 +30,7 @@ deploy:
     branch: master
   access_key_id: $AWS_DEVWORKS_ACCESS_KEY
   secret_access_key: $AWS_DEVWORKS_SECRET_KEY
+  skip_cleanup: true
+  zip_file: "target/devworks-1.0.0.jar"
   
  
