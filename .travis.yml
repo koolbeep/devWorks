@@ -11,21 +11,16 @@ services:
 before_install:
   - mvn package
   - docker build -t koolbeep/devworks .
-  - cp target/devworks-1.0.0.jar .
-  - ls -lrt
-  - pwd
 
 deploy:
   skip_cleanup: true
   provider: elasticbeanstalk
   region: "us-east-2"
-  app: "devWorks"
-  env: "Devworks-env"
+  app: "devworkjava3"
+  env: "Devworkjava3-env"
   bucket_name: "elasticbeanstalk-us-east-2-548571153351"
-  bucket_path: "devWorks"
-  file:
-    - "Dockerfile"
-    - "target/devworks-1.0.0.jar"
+  bucket_path: "devworkjava3"
+  zip_file: "target/devworks-1.0.0.jar"
   on:
     branch: master
   access_key_id: $AWS_DEVWORKS_ACCESS_KEY
