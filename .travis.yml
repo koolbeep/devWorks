@@ -23,6 +23,9 @@ deploy:
   env: "Devworks-env"
   bucket_name: "elasticbeanstalk-us-east-2-548571153351"
   bucket_path: "devWorks"
+  file:
+    - "Dockerfile"
+    - "target/devworks-1.0.0.jar"
   on:
     branch: master
   access_key_id: $AWS_DEVWORKS_ACCESS_KEY
