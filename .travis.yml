@@ -11,6 +11,9 @@ services:
 before_install:
   - mvn package
   - docker build -t koolbeep/devworks .
+  
+script:
+  - docker run -e CI=true koolbeep/devworks
 
 deploy:
   provider: elasticbeanstalk
