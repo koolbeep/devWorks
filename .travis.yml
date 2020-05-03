@@ -11,9 +11,8 @@ services:
 before_install:
   - mvn package
   - docker build -t koolbeep/devworks .
-
-before_deploy:
   - cp target/devworks-1.0.0.jar .
+  - ls -lrt
   - pwd
 
 deploy:
