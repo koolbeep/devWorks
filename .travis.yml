@@ -5,8 +5,8 @@ jdk:
 
 sudo: required
 
-#services:
-#  - docker
+services:
+  - docker
 
 before_install:
 #  - mvn package
