@@ -16,6 +16,7 @@ before_install:
   - pwd
 
 deploy:
+  skip_cleanup: true
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "devWorks"
